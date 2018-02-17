@@ -1,4 +1,4 @@
-name: qgrid-environment
+name: ufabc-pdf-2-sheet
 channels:
   - tim_shawver
   - conda-forge
