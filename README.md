@@ -8,5 +8,3 @@ Convert UFABC Classes PDFs to Interactive Spreadsheets
 [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/fernando-freitas-alves/ufabc-pdf-2-sheet.svg)]()
 [![GitHub top language](https://img.shields.io/github/languages/top/fernando-freitas-alves/ufabc-pdf-2-sheet.svg)]()
 [![license](https://img.shields.io/github/license/fernando-freitas-alves/ufabc-pdf-2-sheet.svg)](https://github.com/fernando-freitas-alves/ufabc-pdf-2-sheet/blob/master/LICENSE)
-
-<iframe src="https://raw.githubusercontent.com/fernando-freitas-alves/ufabc-pdf-2-sheet/master/index.html" frameborder="0" allowfullscreen></iframe>
