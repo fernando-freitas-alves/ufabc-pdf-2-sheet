@@ -1,1 +1,1 @@
-java-common
+openjdk-8-jdk
