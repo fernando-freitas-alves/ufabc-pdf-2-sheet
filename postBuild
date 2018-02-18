@@ -1,1 +1,2 @@
-su npm install --global generate generate-travis
+su
+npm install --global generate generate-travis
