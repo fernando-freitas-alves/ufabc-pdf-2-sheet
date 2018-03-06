@@ -1,0 +1,39 @@
+* {
+	font-family: "Lato", Helvetica;
+}
+#title, #subtitle {
+	text-align:     center;
+	text-transform: uppercase;
+}
+#title {
+	margin-bottom: 0;
+	font-size:     40pt;
+}
+#subtitle {
+	margin-top:    0;
+	margin-bottom: 40px;
+}
+.react-grid-Main {
+	font-family: "Lato", Helvetica;
+	font-size:   10pt;
+}
+.react-grid-HeaderCell {
+	text-transform: uppercase;
+}
+.sala {
+	font-weight: bold;
+	font-style:  italic;
+}
+.centerDiv {
+	text-align: center;
+}
+p.centerDiv {
+	margin-top:     40px;
+	text-transform: uppercase;
+}
+#export-button {
+	margin-top: 20px;
+	height:     30px;
+	font-size:  10pt;
+	text-align: center;
+}
