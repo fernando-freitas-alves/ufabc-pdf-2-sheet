@@ -1,2 +1,2 @@
-corpora
-tokenizers
+floresta
+punkt
