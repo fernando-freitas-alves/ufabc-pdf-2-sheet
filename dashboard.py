@@ -17,6 +17,7 @@ with open(json_filename, 'r') as file:
     df = convertJSONtoSheet(json_data).reset_index()
 
     app = dash.Dash(__name__, static_folder='static')
+    server = app.server
     app.scripts.append_script({
         "external_url": 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'
     })
@@ -112,4 +113,4 @@ with open(json_filename, 'r') as file:
         return None
 
     if __name__ == '__main__':
-        app.run_server(debug=True, port=8080)
+        app.run_server(debug=True)#, port=8080)
