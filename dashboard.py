@@ -112,4 +112,4 @@ with open(json_filename, 'r') as file:
         return None
 
     if __name__ == '__main__':
-        app.run_server(debug=True)
+        app.run_server(debug=True, port=8080)
