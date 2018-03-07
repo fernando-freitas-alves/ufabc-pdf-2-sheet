@@ -22,9 +22,9 @@ with open(json_filename, 'r') as file:
     # app = dash.Dash(server=server)
     app = dash.Dash(__name__, static_folder='static')
 
-    @app.server.route('/favicon.ico')
-    def favicon():
-        return send_from_directory(os.path.join(app.server.root_path, 'static'), 'favicon.ico', mimetype='image/x-icon')
+    # @app.server.route('/favicon.ico')
+    # def favicon():
+    #     return send_from_directory(os.path.join(app.server.root_path, 'static'), 'favicon.ico', mimetype='image/x-icon')
 
     app.scripts.append_script({
         "external_url": 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'
@@ -40,8 +40,6 @@ with open(json_filename, 'r') as file:
     })
 
     app.layout = html.Div([
-        html.Title('UFABC PDF 2 Sheets'),
-
         # html.Link(
         #     href = '/static/stylesheets/dashboard.css',
         #     rel  = 'stylesheet'
