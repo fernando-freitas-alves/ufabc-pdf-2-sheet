@@ -18,9 +18,45 @@ with open(json_filename, 'r') as file:
     json_data = json.load(file)
     df = convertJSONtoSheet(json_data).reset_index()
 
+    # class Dash_responsive(dash.Dash):
+    #     def __init__(self, *args, **kwargs):
+    #         super().__init__(*args, **kwargs)
+
+    #     #Overriding from https://github.com/plotly/dash/blob/master/dash/dash.py#L282
+    #     def index(self, *args, **kwargs):
+    #         scripts = self._generate_scripts_html()
+    #         css = self._generate_css_dist_html()
+    #         config = self._generate_config_html()
+    #         title = getattr(self, 'title', 'Dash')
+    #         return ('''
+    #         <!DOCTYPE html>
+    #         <html>
+    #             <head>
+    #                 <meta charset="UTF-8"/>
+    #                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    #                 <title>{}</title>
+    #                 {}
+    #             </head>
+    #             <body>
+    #                 <div id="react-entry-point">
+    #                     <div class="_dash-loading">
+    #                         Loading...
+    #                     </div>
+    #                 </div>
+    #             </body>
+    #             <footer>
+    #                 {}
+    #                 {}
+    #             </footer>
+    #         </html>
+    #         '''.format(title, css, config, scripts))
+
+    # app = Dash_responsive(__name__, static_folder='static')
     # server = Flask(__name__, static_folder='static')
     # app = dash.Dash(server=server)
     app = dash.Dash(__name__, static_folder='static')
+    app.title = 'UFABC PDF 2 Spreadsheet'
+    server = app.server
 
     # @app.server.route('/favicon.ico')
     # def favicon():
