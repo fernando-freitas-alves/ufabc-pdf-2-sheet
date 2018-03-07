@@ -18,6 +18,16 @@ with open(json_filename, 'r') as file:
     json_data = json.load(file)
     df = convertJSONtoSheet(json_data).reset_index()
 
+    # dt._js_dist = [
+    #     {
+    #         'relative_package_path': 'bundle.js',
+    #         'external_url': (
+    #             '\static\dash_table_experiments_bundle.js'
+    #         ).format(dt.__version__),
+    #         'namespace': 'dash_table_experiments'
+    #     }
+    # ]
+
     # class Dash_responsive(dash.Dash):
     #     def __init__(self, *args, **kwargs):
     #         super().__init__(*args, **kwargs)
