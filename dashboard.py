@@ -18,14 +18,13 @@ with open(json_filename, 'r') as file:
     json_data = json.load(file)
     df = convertJSONtoSheet(json_data).reset_index()
 
-    server = Flask(__name__, static_folder='static')
-    app = dash.Dash(server=server)
-    # app = dash.Dash(__name__, static_folder='static')
-    # server = app.server
+    # server = Flask(__name__, static_folder='static')
+    # app = dash.Dash(server=server)
+    app = dash.Dash(__name__, static_folder='static')
 
-    @server.route('/favicon.ico')
+    @app.server.route('/favicon.ico')
     def favicon():
-        return send_from_directory(os.path.join(server.root_path, 'static'), 'favicon.ico', mimetype='image/x-icon')
+        return send_from_directory(os.path.join(app.server.root_path, 'static'), 'favicon.ico', mimetype='image/x-icon')
 
     app.scripts.append_script({
         "external_url": 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'
