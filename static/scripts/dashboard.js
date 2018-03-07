@@ -4,7 +4,8 @@ String.prototype.replaceAll = function(search, replacement) {
 };
 
 // On document ready
-$(function() {
+document.addEventListener("DOMContentLoaded", function(){
+// $(function() {
 
 	// Timeout 0 hack inside 'onready' event prevents some instructions from not working properly
 	setTimeout(function() {
@@ -75,6 +76,7 @@ $(function() {
 		}
 		// Call 'bodyNodeInserted' every time something is inserted in the DOM
 		$('body').on('DOMNodeInserted', bodyNodeInserted);
+		bodyNodeInserted();
 
 	}, 100);
 

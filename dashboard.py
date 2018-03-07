@@ -5,7 +5,7 @@ import dash_html_components as html
 import dash_core_components as dcc
 import dash_table_experiments as dt
 from dash.dependencies import Input, Output
-from flask import send_from_directory
+from flask import Flask, send_from_directory
 import os
 
 from functions import *
@@ -18,13 +18,14 @@ with open(json_filename, 'r') as file:
     json_data = json.load(file)
     df = convertJSONtoSheet(json_data).reset_index()
 
-    app = dash.Dash(__name__, static_folder='static')
-    server = app.server
+    server = Flask(__name__, static_folder='static')
+    app = dash.Dash(server=server)
+    # app = dash.Dash(__name__, static_folder='static')
+    # server = app.server
 
     @server.route('/favicon.ico')
     def favicon():
-        return send_from_directory(os.path.join(server.root_path, 'static'),'logo.png', mimetype='image/png')
-    html.Title('UFABC PDF 2 Sheets')
+        return send_from_directory(os.path.join(server.root_path, 'static'), 'favicon.ico', mimetype='image/x-icon')
 
     app.scripts.append_script({
         "external_url": 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'
@@ -40,6 +41,8 @@ with open(json_filename, 'r') as file:
     })
 
     app.layout = html.Div([
+        html.Title('UFABC PDF 2 Sheets'),
+
         # html.Link(
         #     href = '/static/stylesheets/dashboard.css',
         #     rel  = 'stylesheet'
