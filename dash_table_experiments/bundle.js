@@ -15201,7 +15201,7 @@ this.dash_table_experiments = (function(e) {
 										(n.state = {
 											options: n.getOptions(),
 											rawValue: "",
-											placeholder: "Search"
+											placeholder: "Pesquisar"
 										}),
 										n
 									);
@@ -21269,7 +21269,7 @@ this.dash_table_experiments = (function(e) {
 										selectedRows: [],
 										copied: null,
 										expandedRows: [],
-										canFilter: !1,
+										canFilter: !0,
 										columnFilters: {},
 										sortDirection: null,
 										sortColumn: null,
@@ -23102,7 +23102,7 @@ this.dash_table_experiments = (function(e) {
 										key: e,
 										type: "text",
 										className: "form-control input-sm",
-										placeholder: "Search",
+										placeholder: "Pesquisar",
 										value: this.state.filterTerm,
 										onChange: this.handleChange
 									});
@@ -26730,8 +26730,8 @@ this.dash_table_experiments = (function(e) {
 							getDefaultProps: function() {
 								return {
 									enableAddRow: !0,
-									addRowButtonText: "Add Row",
-									filterRowsButtonText: "!!!Filter Rows"
+									addRowButtonText: "Adicionar",
+									filterRowsButtonText: "Filtrar"
 								};
 							},
 							renderAddRowButton: function() {
@@ -50540,7 +50540,7 @@ this.dash_table_experiments = (function(e) {
 										selectedRows: [],
 										copied: null,
 										expandedRows: [],
-										canFilter: !1,
+										canFilter: !0,
 										columnFilters: {},
 										sortDirection: null,
 										sortColumn: null,
@@ -52452,7 +52452,7 @@ this.dash_table_experiments = (function(e) {
 												type: "text",
 												className:
 													"form-control input-sm",
-												placeholder: "Search",
+												placeholder: "Pesquisar",
 												value: n.state.filterTerm,
 												onChange: n.handleChange
 											});

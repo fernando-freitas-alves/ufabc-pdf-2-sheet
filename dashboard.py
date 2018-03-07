@@ -120,6 +120,7 @@ with open(json_filename, 'r') as file:
             columns              = df.columns,
             rows                 = [{}],
             editable             = False,
+            filterable           = True,
             column_widths        = column_widths,
             row_height           = 30,
             max_rows_in_viewport = 20

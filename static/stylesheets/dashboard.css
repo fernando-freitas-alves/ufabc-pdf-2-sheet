@@ -13,9 +13,16 @@
 	margin-top:    0;
 	margin-bottom: 40px;
 }
+.react-grid-Toolbar {
+    display: none;
+}
 .react-grid-Main {
-	font-family: "Lato", Helvetica;
-	font-size:   10pt;
+	outline-style: none !important;
+	font-family:   "Lato", Helvetica;
+	font-size:     10pt;
+}
+.react-grid-Grid {
+	border-bottom-style: none !important;
 }
 .react-grid-HeaderCell {
 	text-transform: uppercase;
