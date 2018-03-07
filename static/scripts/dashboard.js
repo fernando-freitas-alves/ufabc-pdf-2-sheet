@@ -76,6 +76,6 @@ $(function() {
 		// Call 'bodyNodeInserted' every time something is inserted in the DOM
 		$('body').on('DOMNodeInserted', bodyNodeInserted);
 
-	}, 0);
+	}, 100);
 
 });
