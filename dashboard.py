@@ -5,6 +5,8 @@ import dash_html_components as html
 import dash_core_components as dcc
 import dash_table_experiments as dt
 from dash.dependencies import Input, Output
+from flask import send_from_directory
+import os
 
 from functions import *
 json_filename = '2018.1_SA.json'
@@ -18,6 +20,12 @@ with open(json_filename, 'r') as file:
 
     app = dash.Dash(__name__, static_folder='static')
     server = app.server
+
+    @server.route('/favicon.ico')
+    def favicon():
+        return send_from_directory(os.path.join(server.root_path, 'static'),'logo.png', mimetype='image/png')
+    html.Title('UFABC PDF 2 Sheets')
+
     app.scripts.append_script({
         "external_url": 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'
     })
